@@ -1,14 +1,14 @@
 let img = document.getElementById("bg-desktop")
 
 window.onresize = function(){
-    img.src = "./images/bg-mobile.svg"
-    if(screen.availWidth < 760){
-    }else{
-        img.src = "./images/bg-desktop.svg"
-    }
+    loadImg()
 }
 
 window.onload = function(){
+    loadImg()
+}
+
+function loadImg(){
     if(screen.availWidth < 760){
         img.src = "./images/bg-mobile.svg"
     }else{
